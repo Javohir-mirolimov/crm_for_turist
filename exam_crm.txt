@@ -1,0 +1,318 @@
+1.Mexmonxona
+2.Restoran
+ 
+Bu crm turislar uchun ,andijonga kelganda turislar  mexmonxona va restoranlar bilan tanishini
+mumkin restoran va mexmonxoni joy bron qilish va mexminxonada tanishishi mumkin
+Mexmonxona
+1.mexmonxona haqida ma'lumot
+2.xonalar bilan tanishuv
+3.joy bron qilish
+4.ovqatlar
+5.git
+6.yutuqlar
+Restoran
+1.restoran haqida ma'lumot
+2.menu
+3.order
+4.xizmatlari
+5.qulaliklar
+
+Model_Hotel:
+user
+Hotel
+room
+order
+service
+git
+mean
+pakovka
+order_restaran
+employye
+
+User:
+phone_number
+age
+state
+region
+address_street
+sex
+nationality
+password_series
+status(direktor, manager, admin, turist, other)
+
+
+Sponsors:
+name Char
+
+Image:
+img Img
+
+
+Service:
+name Char
+
+Hotel:
+user FK User
+name Char
+category_address FK Sub_category_address
+description Char
+reting Fl
+spomsors Many Sponsors
+service = Many Sevice
+open_time Date
+card Int 
+img  Many Image 
+
+Room:
+hotel_room Fk Hotel
+name Char
+number_people Int
+liks BL
+luks_room (tv, firge, safe, microtakl )
+free_wifi Bl
+free_porkofka bl
+price Des
+is_delivery Bl
+img FK Room_image
+slug
+
+Room_image:
+name Char
+
+
+Order_room:
+user Fk User
+order_room Fk Room
+dedline 
+create_at
+
+
+Achievement:
+name Char
+description Char
+igm Img
+Hotel_food
+name 
+desciption
+price
+is_sale 
+old_cost
+discount_percent
+quatity
+is_delivery 
+slug
+create_at 
+
+Order_hotel_food
+user
+hotel
+dadline
+create_at
+
+ 
+Porkovka:
+hotel
+number_porkofka
+create_at
+slug
+
+
+
+
+
+order_Porkovka:
+user
+porkofka 
+car_name
+car_number
+date
+create_at
+
+Git :
+user FK User
+hotel FK Hotel
+languge Many to Languge
+tajriba Int
+bio Text
+img Img 
+
+Order_restaran_food
+user
+restaran_name
+mean
+drink 
+quantity
+address
+
+
+Employee:
+user Fk User
+hotel Fk Hotel
+status (dilektor, manager, turist, worker, other)
+salary Des
+bio
+start_time Time
+end_time Time
+
+
+
+Mode_restaran
+user 
+restaran
+talbe
+room
+order
+mean
+menu
+employye
+
+
+
+
+Restaran:
+name Char
+reting Fl
+description Char   
+open_time Date 
+start_time Time
+end_time Time
+address
+img Img
+
+Teble:
+number Int
+people_number Int
+status(small, big)
+is_delivery Bl
+
+
+
+Room:
+name Char
+people_number Int
+status(luks, oddiy)
+is_delivery Bl
+
+
+
+Order:
+user Fk User 
+order_name Char
+peole_number Int 
+status(luks, oddiy)
+is_delivery Bl
+
+
+
+Mean
+name Char
+category  FK Sub_category
+photos  Img
+quantity Int
+descriptions Char
+price Dec
+is_sale Bl
+old_cost Dec
+discount_percent Int
+rating Fl
+
+
+
+Category:
+name Char
+   
+
+
+Sub_category:
+name Char
+category FK Category
+
+
+
+Api
+
+Crud
+ 
+Hotel
+room
+order
+service
+git
+mean
+pakovka
+order_restaran
+employye
+restaran
+talbe
+room
+order
+menu
+
+All
+
+Hotel
+room
+order
+service
+git
+mean
+pakovka
+order_restaran
+employye
+restaran
+talbe
+room
+order
+menu
+
+
+Accuont:
+register 
+login
+logout
+delete
+update
+
+
+
+Filter:
+filter_hotel_by_name
+filter_hotel_by_reting
+filter_hotel_by_sub_category_address
+filter_sub_category_address_by_category_address
+filter_git_by_username
+filter_git_by_hotel
+filter_git_by_languge
+filter_git_by_experience
+filter_room_by_name
+filter_room_by_is_delivery
+filter_room_by_poeple_number
+filter_room_by_status
+filter_room_by_luks
+filter_uytuqlar_by_name
+filter_restaran_by_name
+filter_restaran_by_reting
+filter_restaran_by_dedline
+filter_table_by_is_delivery
+filter_room_by_is_delivery
+filter_mean_by_name
+filter_sub_category_by_category
+filter_mean_sub_category
+filter_mean_by_is_sale
+filter_mean_by_reting
+
+
+
+GEt pk:
+room
+table
+git
+restaran_room
+hotel
+restaran
+porkofka
+mean
+
+
+
+
